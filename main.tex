@@ -1,0 +1,152 @@
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{Purple}{HTML}{7b5082} 
+\definecolor{Violet}{HTML}{736aa0}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+
+\colorlet{heading}{Purple}
+\colorlet{accent}{Violet}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Thomas Creavin}
+\tagline{Computer Science Student}
+%\photo{3.3cm}{profile.jpg} Profile picture
+\personalinfo{%
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{thomas.creavin@gmail.com}
+%   \phone{000-00-0000}
+%  \mailaddress{Address, Street, 00000 County}
+  \location{Dublin, Ireland}
+%  \homepage{marissamayr.tumblr.com/}
+%  \twitter{@marissamayer}
+  \linkedin{linkedin.com/in/thomas-creavin}
+   \github{github.com/creavin} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{TECHNICAL SKILLS}
+
+\cvskill{C, Java, Koltin, Scheme, Unix}{3}
+\smallskip
+\cvskill{Bash, Bootstrap, CSS, Git, HTML , Latex, Wordpress }{2}
+\smallskip
+\cvskill{Javascript, PHP, Python, R, SQL}{1}
+% \divider
+%\cvskill{German}{3}
+
+\cvsection{Education}
+\cveventEducation{BSc Computer Science}{University College Dublin}{ September 2017 -- 2021}{3.9 GPA (93\% / 1st Class Honours)}
+\begin{itemize}
+\item Pursuing minor in Statistics \& Data Analytics
+\smallskip
+\item Relevant Modules: Databases and Information Systems, Data Structures \& Algorithms, Object Oriented Programming, Operating Systems, Software Engineering, Unix Programming, and Web Design
+\end{itemize}
+%\smallskip
+\divider
+
+\cveventEducationLocation{Leaving Certificate}{Presentation College Headford}{ September 2015 -- June 2017}{589 points}{Galway}
+\begin{itemize}
+\item Received Pat Scanhill Award for achieving the highest Leaving Certificate results in my graduating year
+\end{itemize}
+%\divider
+
+\cvsection{Experience}
+\cvevent{Research Assistant}{University College Dublin}{March 2019 -- June 2019}{Dublin, Ireland}
+\begin{itemize}
+\item Worked on a custom Wordpress Theme which will be used to facilitate the exchange of research ideas between practitioners and researchers
+\smallskip
+\item Created PHP Wordpress plugins to display available research ideas and author information
+\smallskip
+\item Created custom style sheets to modify an existing theme
+\end{itemize}
+
+\divider
+
+\cvevent{Mathematics \& Programming Tutor}{Self-employed}{September 2015 -- Present}{Galway \& Dublin}
+\begin{itemize}
+\item Tutor several students annually in Junior and Leaving Cert. Mathematics, IT skills, and programming
+\end{itemize}
+
+\divider
+
+\cvevent{Retail Buyer}{Keady's Supermarket}{Janurary 2018 -- Present}{Headford, Galway}
+\begin{itemize}
+\item Work independently to compile alcohol, cigarette, and grocery orders
+\smallskip
+\item Responsible for setting selling prices and in-store promotions
+\end{itemize}
+
+\clearpage
+
+%\cvsection[page2sidebar]{Publications}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% %% If the NEXT page doesn't start with a \cvsection but you'd
+% %% still like to add a sidebar, then use this command on THIS
+% %% page to add it. The optional argument lets you pull up the
+% %% sidebar a bit so that it looks aligned with the top of the
+% %% main column.
+% % \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
