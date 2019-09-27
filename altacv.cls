@@ -39,6 +39,7 @@
 \RequirePackage{fontawesome}
 \RequirePackage{ifxetex,ifluatex}
 \RequirePackage{scrlfile}
+\RequirePackage[hidelinks]{hyperref}
 
 %% v1.1.5: added for convenience
 \newif\ifxetexorluatex
@@ -143,8 +144,8 @@
 \newcommand{\phone}[1]{\printinfo{\phonesymbol}{#1}}
 \newcommand{\homepage}[1]{\printinfo{\homepagesymbol}{#1}}
 \newcommand{\twitter}[1]{\printinfo{\twittersymbol}{#1}}
-\newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
-\newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
+\newcommand{\linkedin}[2]{\href{#2}{\printinfo{\linkedinsymbol}{#1}} }
+\newcommand{\github}[2]{\href{#2}{\printinfo{\githubsymbol}{#1}} }
 \newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
 
@@ -238,7 +239,7 @@
 }
 
 \newcommand{\cvskill}[2]{%
-\textcolor{emphasis}{\textbf{#1}}\hfill
+\textcolor{emphasis}{\small\textbf{#1}}\hfill
 \foreach \x in {1,...,3}{%
   \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}}\par%
 }
