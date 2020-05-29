@@ -28,6 +28,8 @@
   \usepackage[default]{lato}
 \fi
 
+
+
 % Change the colours if you want to
 \definecolor{Purple}{HTML}{7b5082} 
 \definecolor{Violet}{HTML}{736aa0}
@@ -38,6 +40,14 @@
 \colorlet{accent}{Violet}
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
+
+% URL Style
+\hypersetup{hidelinks,
+breaklinks=true,
+colorlinks=true,
+linkcolor=Purple,
+urlcolor=Purple,
+}
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
@@ -75,11 +85,11 @@
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{TECHNICAL SKILLS}
 
-\cvskill{C, Java, Kotlin, Scheme, Unix}{3}
+\cvskill{AWS, C, Java, Kotlin, Ruby, Unix}{3}
 \smallskip
-\cvskill{Bash, Bootstrap, CSS, Git, Latex, Ruby, Wordpress}{2}
+\cvskill{Bash, Bootstrap, CI/CD, Docker, Git, Spring, SQL}{2}
 \smallskip
-\cvskill{Javascript, PHP, Python, R, SQL}{1}
+\cvskill{Javascript, Hadoop, MongoDB, Python, R, Scala, Spark}{1}
 % \divider
 %\cvskill{German}{3}
 
@@ -88,27 +98,25 @@
 \begin{itemize}
 \item Pursuing minor in Statistics \& Data Analytics
 \smallskip
-\item Relevant Modules: Databases and Information Systems, Data Structures \& Algorithms, Object Oriented Programming, Operating Systems, Unix Programming, and Web Design
+\item Relevant Modules: Data Structures \& Algorithms, Graph Algorithms, Object Oriented Programming, Operating Systems, Programming for Big Data, and Unix Programming 
 \item Unix Programming: Created my own shell, Apache log file parser, and packaged my own Unix program
 \item Software Engineering 2: Worked with teammates to create a JavaFX backgammon game and bot
+\item Web Programming: Created a Spring Boot Containerised Library Management System
 \end{itemize}
 %\smallskip
-\divider
-
-\cveventEducationLocation{Leaving Certificate}{Presentation College Headford}{September 2015--June 2017}{589 points}{Galway}
-\begin{itemize}
-\item Received Pat Scanhill Award for achieving the highest Leaving Certificate results in my graduating year
-\end{itemize}
-%\divider
 
 \cvsection{Experience}
 
-\cvevent{Software Development Engineer Intern}{Amazon}{March 2020 -- August 2020}{Dublin}
+\cvevent{Software Development Engineer Intern}{\faAmazon \quad Amazon Web Services}{March 2020 -- August 2020}{Dublin}
+\begin{itemize}
+    \item Work as an part of a 15 person agile team on the AWS Simple Email Service
+    \item Primarily use Java, JUnit, Spring, and DynamoDB to create and maintain internal tools and packages 
+\end{itemize}
 \divider
 
 \cvevent{Research Assistant}{University College Dublin}{March 2019 -- June 2019}{Dublin, Ireland}
 \begin{itemize}
-\item Worked on a custom Wordpress Theme which will be used to facilitate the exchange of research ideas between practitioners and researchers
+\item Worked on a custom Wordpress Theme which is be used to facilitate the exchange of research ideas between practitioners and researchers
 \smallskip
 \item Created PHP Wordpress plugins to display available research ideas and author information
 \smallskip
